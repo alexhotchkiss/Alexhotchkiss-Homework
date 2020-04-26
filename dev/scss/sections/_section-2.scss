@@ -1,0 +1,30 @@
+/* =============
+    Section 2
+============= */
+#section-2{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 25% 100px auto;
+    grid-template-areas: ". section-2 .";
+
+    img{
+        width: 1024px;
+        height: 685px;
+
+
+    }
+    >aside{
+        >hr{
+            color: $light-blue;
+        }
+        color: $black;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: span 10;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+    }
+    >hr{
+        color: $light-blue;
+    }
+}

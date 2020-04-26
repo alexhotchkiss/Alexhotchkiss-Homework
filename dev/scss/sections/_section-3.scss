@@ -1,0 +1,16 @@
+/* =============
+    section 3
+============= */
+#section-3{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 25% 100px auto;
+    grid-template-areas: ". section-3 .";
+
+    ul{
+        grid-area: section-3;
+        display: grid;
+        grid-gap: 20px;
+    }
+    
+}

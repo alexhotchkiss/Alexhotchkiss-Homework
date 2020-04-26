@@ -2,12 +2,20 @@
     Section 1
 ============= */
 #section-1{
-    color: $black;
-    text-align: left;
-    hr{
-        height: 1px;
-        color: $blue;
-        border: none;
+
+    img{
+        width: 491px;
+        height: 737px;
+    }
+    >section {
+        color: $black;
+        text-align: right;
+        >hr{
+            color: $light-blue;
+        }
+    }
+    >hr{
+        color: $light-blue;
     }
 }
   

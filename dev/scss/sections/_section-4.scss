@@ -1,0 +1,21 @@
+/* =============
+    section 4
+============= */
+#section-4{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 25% 100px auto;
+    grid-template-areas: ". section-3 .";
+    img{
+        width: 316px;
+        height: 316px;
+    }
+    >article{
+        color: $blue;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: span 10;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+    }
+}
