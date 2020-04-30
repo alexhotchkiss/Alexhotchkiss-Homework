@@ -2,20 +2,78 @@
     Section 1
 ============= */
 #section-1{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 25% 100px auto;
+    grid-template-areas: ". section-2 .";
+    
+    >aside {
+        grid-area: section-2;
+        text-align: center;
+
+        #section-2-first{
+            @include md{
+                display: grid;
+                grid-template-columns: 20% auto 20%;
+                grid-template-areas: ". section-2-first .";
+            }
+
+            >div {
+                @include md{
+                    grid-area: section-2-first;
+                }
+               
+            }
+        }
+
+        #section-2-middle{
+            @include lg{
+                display: grid;
+                grid-template-columns: 20% auto 20%;
+                grid-template-areas: ". section-2-middle .";
+            }
+            >div {
+                @include lg{
+                    grid-area: section-2-middle;
+                }
+            }
+        }
+        #section-2-last {
+            @include md{
+                display: grid;
+                grid-template-columns: 10% auto 10%;
+                grid-template-areas: ". section-2-last .";
+            }
+            @include lg{
+                grid-template-columns: 25% auto 25%;
+            }
+
+            >div {
+                @include md{
+                    grid-area: section-2-last;
+                }
+            }
+        }
+
+    }
 
     img{
         width: 491px;
         height: 737px;
     }
     >section {
-        color: $black;
-        text-align: right;
         >hr{
             color: $light-blue;
         }
-    }
-    >hr{
-        color: $light-blue;
+        color: $black;
+        text-align: right;
+        grid-column-start: 1;
+        grid-column-end: span 10;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+        >hr{
+            color: $light-blue;
+        }
     }
 }
   

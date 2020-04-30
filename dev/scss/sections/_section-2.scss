@@ -7,10 +7,59 @@
     grid-template-rows: 25% 100px auto;
     grid-template-areas: ". section-2 .";
 
-    img{
-        width: 1024px;
-        height: 685px;
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
 
+    >article {
+        grid-area: section-2;
+        text-align: center;
+
+        #section-2-first{
+            @include md{
+                display: grid;
+                grid-template-columns: 20% auto 20%;
+                grid-template-areas: ". section-2-first .";
+            }
+
+            >div {
+                @include md{
+                    grid-area: section-2-first;
+                }
+            }
+        }
+
+        #section-2-middle{
+            @include lg{
+                display: grid;
+                grid-template-columns: 20% auto 20%;
+                grid-template-areas: ". section-2-middle .";
+            }
+            >div {
+                @include lg {
+                    grid-area: section-2-middle;
+                }
+            }
+        }
+        #section-2-last{
+            @include md{
+                display: grid;
+                grid-template-columns: 10% auto 10%;
+                grid-template-areas: ". section-2-last .";
+            }
+            @include lg{
+                grid-template-columns: 25% auto 25%;
+            }
+
+            >div {
+                @include md{
+                    grid-area: section-2-last;
+                }
+            }
+        }
+    }
+    img{
+        height: 100%;
 
     }
     >aside{
