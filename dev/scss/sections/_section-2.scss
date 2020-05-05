@@ -7,6 +7,21 @@
     grid-template-rows: 25% 100px auto;
     grid-template-areas: ". section-2 .";
 
+    background-image: url('../img/section-2/iceberg1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 514px;
+    width: 320px;
+
+    @include md {
+        height: 514px;
+    }
+
+    @include lg {
+        height: 685px;
+        width: 1024px;
+    }
+
     @include xl{
         grid-template-columns: auto 1200px auto;
     }
@@ -58,11 +73,13 @@
             }
         }
     }
-    img{
-        height: 100%;
 
-    }
     >aside{
+        grid-column-start: 1;
+        grid-column-end: span 10;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+
         >hr{
             color: $light-blue;
         }

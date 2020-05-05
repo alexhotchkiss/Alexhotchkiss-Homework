@@ -368,10 +368,18 @@ textarea {
 ============= */
 header {
   color: #00487C;
-  text-align: left; }
-  header img {
-    width: 100%; }
-
+  text-align: left;
+  background-image: url("../img/header/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 380px; }
+  @media (min-width: 768px) {
+    header {
+      height: 510px; } }
+  @media (min-width: 992px) {
+    header {
+      height: 680px;
+      background-position: 0px, 100px; } }
 /* =============
     Footer
 ============= */
@@ -391,50 +399,32 @@ footer {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-rows: 25% 100px auto;
-  grid-template-areas: ". section-2 ."; }
-  #section-1 > aside {
-    grid-area: section-2;
-    text-align: center; }
-    @media (min-width: 768px) {
-      #section-1 > aside #section-2-first {
-        display: grid;
-        grid-template-columns: 20% auto 20%;
-        grid-template-areas: ". section-2-first ."; } }
-    @media (min-width: 768px) {
-      #section-1 > aside #section-2-first > div {
-        grid-area: section-2-first; } }
-    @media (min-width: 992px) {
-      #section-1 > aside #section-2-middle {
-        display: grid;
-        grid-template-columns: 20% auto 20%;
-        grid-template-areas: ". section-2-middle ."; } }
-    @media (min-width: 992px) {
-      #section-1 > aside #section-2-middle > div {
-        grid-area: section-2-middle; } }
-    @media (min-width: 768px) {
-      #section-1 > aside #section-2-last {
-        display: grid;
-        grid-template-columns: 10% auto 10%;
-        grid-template-areas: ". section-2-last ."; } }
-    @media (min-width: 992px) {
-      #section-1 > aside #section-2-last {
-        grid-template-columns: 25% auto 25%; } }
-    @media (min-width: 768px) {
-      #section-1 > aside #section-2-last > div {
-        grid-area: section-2-last; } }
+  grid-template-areas: ". section-1 ."; }
   #section-1 img {
-    width: 491px;
-    height: 737px; }
-  #section-1 > section {
+    height: 482px; }
+    @media (min-width: 768px) {
+      #section-1 img {
+        height: 419px; } }
+    @media (min-width: 992px) {
+      #section-1 img {
+        height: 737px; } }
+  #section-1 > #section-1-content {
+    grid-column-start: 1;
+    grid-column-end: span 10;
+    grid-row-start: 2;
+    grid-row-end: span 2;
     color: #000;
     text-align: right;
     grid-column-start: 1;
     grid-column-end: span 10;
     grid-row-start: 2;
     grid-row-end: span 2; }
-    #section-1 > section > hr {
+    @media (min-width: 1200px) {
+      #section-1 > #section-1-content {
+        grid-template-columns: auto 1200px auto; } }
+    #section-1 > #section-1-content > hr {
       color: #007ADF; }
-    #section-1 > section > hr {
+    #section-1 > #section-1-content > hr {
       color: #007ADF; }
 
 /* =============
@@ -444,7 +434,19 @@ footer {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-rows: 25% 100px auto;
-  grid-template-areas: ". section-2 ."; }
+  grid-template-areas: ". section-2 .";
+  background-image: url("../img/section-2/iceberg1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 514px;
+  width: 320px; }
+  @media (min-width: 768px) {
+    #section-2 {
+      height: 514px; } }
+  @media (min-width: 992px) {
+    #section-2 {
+      height: 685px;
+      width: 1024px; } }
   @media (min-width: 1200px) {
     #section-2 {
       grid-template-columns: auto 1200px auto; } }
@@ -478,9 +480,11 @@ footer {
     @media (min-width: 768px) {
       #section-2 > article #section-2-last > div {
         grid-area: section-2-last; } }
-  #section-2 img {
-    height: 100%; }
   #section-2 > aside {
+    grid-column-start: 1;
+    grid-column-end: span 10;
+    grid-row-start: 2;
+    grid-row-end: span 2;
     color: #000;
     text-align: center;
     grid-column-start: 1;
@@ -504,6 +508,13 @@ footer {
     grid-area: section-3;
     display: grid;
     grid-gap: 20px; }
+    #section-3 ul img {
+      height: 310px;
+      width: 320px; }
+    @media (min-width: 768px) {
+      #section-3 ul {
+        width: 768px;
+        height: 723px; } }
     @media (min-width: 768px) {
       #section-3 ul {
         grid-template-columns: repeat(2, 1fr); } }
@@ -520,7 +531,8 @@ footer {
   grid-template-areas: ". section-3 ."; }
   #section-4 img {
     width: 316px;
-    height: 316px; }
+    height: 316px;
+    padding-left: 75px; }
   #section-4 > article {
     color: #00487C;
     text-align: center;
