@@ -2,34 +2,58 @@
     section 3
 ============= */
 #section-3{
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-rows: 25% 100px auto;
-    grid-template-areas: ". section-3 .";
+    
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-3 .";
+    }
 
     ul{
-        grid-area: section-3;
         display: grid;
         grid-gap: 20px;
+        grid-template-rows: repeat(3, 296px);
     
-        img{
-            height: 310px;
-            width: 320px;
-        }
-
-        @include md {
-            width: 768px;
-            height: 723px;
-        }
-
-        @include md {
+        @include md{
             grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 340px);
+            grid-template-areas: 
+            "iceberg2 iceberg2"
+            "iceberg2 iceberg2"
+            "penguins boat"
         }
 
-        @include md {
-            grid-template-columns: repeat(3, 1fr);
+        @include xl{
+            grid-area: section-3;
         }
 
+        li{
+            background-position: center;
+            background-size: cover;
+        }
+
+        #iceberg2{
+            background-image: url("../img/section-3/iceberg2.jpg");
+            @include md{
+                grid-area: iceberg;
+                height: 723px;
+                background-position: center;
+            }
+        }
+
+        #penguins{
+            background-image: url("../img/section-3/pen.jpg");
+            @include md{
+                grid-area: penguins;
+            }
+        }
+
+        #boat{
+            background-image: url("../img/section-3/boat1.jpg");
+            @include md{
+                grid-area: boat;
+            }
+        }
     }
-    
+
 }

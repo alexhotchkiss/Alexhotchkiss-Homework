@@ -4,11 +4,13 @@
 footer{
     background-color: $blue;
     padding: 50px 0;
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". footer .";
-
-    >div {
-        grid-area: footer;
+    text-align: center;
+    color: $white;
+    position: relative;
+    
+    padding: {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
     }
 }
