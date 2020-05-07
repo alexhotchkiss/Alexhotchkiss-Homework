@@ -422,7 +422,9 @@ footer {
     grid-row-end: span 2; }
     @media (min-width: 1200px) {
       #section-1 > #section-1-content {
-        grid-template-columns: auto 1200px auto; } }
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ".section-1-content"; } }
     #section-1 > #section-1-content > hr {
       color: #007ADF; }
     #section-1 > #section-1-content > hr {

@@ -21,7 +21,9 @@
     >#section-1-content {
 
         @include xl{
+            display: grid;
             grid-template-columns: auto 1200px auto;
+            grid-template-areas: ".section-1-content";
         }
 
         grid-column-start: 1;
