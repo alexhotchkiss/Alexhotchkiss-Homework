@@ -499,7 +499,7 @@ footer {
 
 #section-3 ul {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 20px;
   grid-template-rows: repeat(3, 296px); }
   @media (min-width: 768px) {
     #section-3 ul {
