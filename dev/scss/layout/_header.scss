@@ -3,8 +3,6 @@
 ============= */
 header{
     color: $blue;
-    text-align: left;
-    
     background-image: url('../img/header/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -18,4 +16,21 @@ header{
         height: 680px;
         background-position: 0px, 100px;
     }
+
+    #nav-container{
+        background-color: none;
+        grid-area: nav;
+        display: none;
+
+        @include lg{
+            display: block;
+        }
+    }
+
+    section{
+        i{
+            color: $blue;
+        }
+    }
+
 }

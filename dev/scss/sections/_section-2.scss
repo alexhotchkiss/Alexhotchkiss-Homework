@@ -1,97 +1,22 @@
 /* =============
     Section 2
 ============= */
+
 #section-2{
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-rows: 25% 100px auto;
-    grid-template-areas: ". section-2 .";
-
-    background-image: url('../img/section-2/iceberg1.jpg');
-    background-size: cover;
+    height: 516px;
+    background-image: url("../img/section-2/iceberg1.jpg");
     background-position: center;
-    height: 514px;
-    width: 320px;
+    background-size: cover;
 
-    @include md {
-        height: 514px;
-        width: 768px;
+    @include md{
+        height: 575px;
     }
 
-    @include lg {
-        height: 685px;
-        width: 1024px;
+    @include lg{
+        height: 625px;
     }
 
     @include xl{
-        grid-template-columns: auto 1200px auto;
-    }
-
-    >article {
-        grid-area: section-2;
-        text-align: center;
-
-        #section-2-first{
-            @include md{
-                display: grid;
-                grid-template-columns: 20% auto 20%;
-                grid-template-areas: ". section-2-first .";
-            }
-
-            >div {
-                @include md{
-                    grid-area: section-2-first;
-                }
-            }
-        }
-
-        #section-2-middle{
-            @include lg{
-                display: grid;
-                grid-template-columns: 20% auto 20%;
-                grid-template-areas: ". section-2-middle .";
-            }
-            >div {
-                @include lg {
-                    grid-area: section-2-middle;
-                }
-            }
-        }
-        #section-2-last{
-            @include md{
-                display: grid;
-                grid-template-columns: 10% auto 10%;
-                grid-template-areas: ". section-2-last .";
-            }
-            @include lg{
-                grid-template-columns: 25% auto 25%;
-            }
-
-            >div {
-                @include md{
-                    grid-area: section-2-last;
-                }
-            }
-        }
-    }
-
-    >aside{
-        grid-column-start: 1;
-        grid-column-end: span 10;
-        grid-row-start: 2;
-        grid-row-end: span 2;
-
-        >hr{
-            color: $light-blue;
-        }
-        color: $black;
-        text-align: center;
-        grid-column-start: 1;
-        grid-column-end: span 10;
-        grid-row-start: 2;
-        grid-row-end: span 2;
-    }
-    >hr{
-        color: $light-blue;
+        height: 682px;
     }
 }

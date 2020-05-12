@@ -2,24 +2,42 @@
     section 4
 ============= */
 #section-4{
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-rows: 25% 100px auto;
-    grid-template-areas: ". section-3 .";
-    
-    img{
-        width: 316px;
-        height: 316px;
-        padding-left: 75px;
-        padding-bottom: 30px;
-        
+    padding: 41px 0 36px;
+
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-4 .";
     }
-    >article{
-        color: $blue;
-        text-align: center;
-        grid-column-start: 1;
-        grid-column-end: span 10;
-        grid-row-start: 2;
-        grid-row-end: span 2;
+
+    >div{
+
+        @include xl{
+            display: grid;
+            grid-template-columns: 35% auto;
+            grid-area: section-4;
+        }
+
+        aside{
+            text-align: center;
+            margin-bottom: 34px;
+            @include md{
+                margin-bottom: 46px;
+            }
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 15px auto 15px;
+            grid-template-areas: ". section-4 .";
+            color: $blue;
+
+            @include md{
+                grid-template-columns: auto 70% auto;
+            }
+            >div{
+                grid-area: section-4;
+            }
+        }
     }
 }

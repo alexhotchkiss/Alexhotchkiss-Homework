@@ -11,7 +11,7 @@
 
     ul{
         display: grid;
-        grid-gap: 20px;
+        grid-gap: 30px;
         grid-template-rows: repeat(3, 296px);
     
         @include md{
@@ -35,8 +35,7 @@
         #iceberg2{
             background-image: url("../img/section-3/iceberg2.jpg");
             @include md{
-                grid-area: iceberg;
-                height: 723px;
+                grid-area: iceberg2;
                 background-position: center;
             }
         }

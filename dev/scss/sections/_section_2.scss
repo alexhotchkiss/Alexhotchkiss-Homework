@@ -1,0 +1,30 @@
+/* =============
+    section 2
+============= */
+
+#section_2{
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section_2 .";
+    padding: 43px 0px;
+    text-align: center;
+    color: $black;
+
+    @include md{
+        grid-template-columns: auto 70px auto;
+    }
+
+    @include xl{
+        grid-template-columns: auto 650px auto;
+    }
+
+    >div{
+        grid-area: section_2;
+
+        hr{
+            border: none;
+            height: 5px;
+            background-color: $blue;
+        }
+    }
+}
