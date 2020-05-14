@@ -29,4 +29,11 @@ ul{
     }
 }
 
+.show-for-large {
+    display: none;
+    @include lg{
+        display: block;
+    }
+}
+
 

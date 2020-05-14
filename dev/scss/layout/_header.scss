@@ -7,6 +7,11 @@ header{
     background-size: cover;
     background-position: center;
     height: 380px;
+    padding-left: 10px;
+    width: 100%;
+
+
+    
 
     @include md {
         height: 510px
@@ -17,20 +22,60 @@ header{
         background-position: 0px, 100px;
     }
 
-    #nav-container{
-        background-color: none;
-        grid-area: nav;
-        display: none;
+    >div {
+        display: grid;
+        grid-template-areas: "burger survival"
+                            "nav nav";
+        grid-template-columns: 20% auto;
 
         @include lg{
-            display: block;
+            grid-template-areas: "nav survival";
         }
-    }
 
-    section{
-        i{
+
+        #logo-container{
+            grid-area: survival;
+            padding: 20px;
+
+            text-align: right;
+
+            a:link,
+            a:visited {
+                
+            }
+
+            a:hover,
+            a:active{
+                color: $white;
+            }
+        }
+
+        #burger-container{
+            align-items: center;
+            grid-area: burger;
+            display: flex;
+            padding: 10px;
+
+            @include lg{
+                display: none !important;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: rem-calc(30);        
+            }
+
+        }
+
+        #nav-container{
             color: $blue;
+            grid-area: nav;
+            padding: 10px;
+            display: none;
+            
+            @include lg{
+                display: block !important;
+            }
         }
     }
-
 }

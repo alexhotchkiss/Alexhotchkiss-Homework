@@ -339,9 +339,28 @@ ul {
     justify-content: center;
     align-items: center; }
 
+.show-for-large {
+  display: none; }
+  @media (min-width: 992px) {
+    .show-for-large {
+      display: block; } }
 /* =============
     Typography
 ============= */
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+#nav-container {
+  font-family: 'Helvetica', sans-serif; }
+
 /* =============
     Buttons
 ============= */
@@ -364,12 +383,10 @@ textarea {
     Navigation
 ============= */
 #nav-container ul {
-  height: 100%;
-  text-align: right; }
+  height: 100%; }
   @media (min-width: 992px) {
     #nav-container ul {
-      display: flex;
-      justify-content: flex-end; } }
+      display: flex; } }
   #nav-container ul li {
     margin-bottom: 20px; }
     @media (min-width: 992px) {
@@ -393,7 +410,9 @@ header {
   background-image: url("../img/header/hero.jpg");
   background-size: cover;
   background-position: center;
-  height: 380px; }
+  height: 380px;
+  padding-left: 10px;
+  width: 100%; }
   @media (min-width: 768px) {
     header {
       height: 510px; } }
@@ -401,16 +420,39 @@ header {
     header {
       height: 680px;
       background-position: 0px, 100px; } }
-  header #nav-container {
-    background-color: none;
-    grid-area: nav;
-    display: none; }
+  header > div {
+    display: grid;
+    grid-template-areas: "burger survival" "nav nav";
+    grid-template-columns: 20% auto; }
     @media (min-width: 992px) {
-      header #nav-container {
-        display: block; } }
-  header section i {
-    color: #00487C; }
-
+      header > div {
+        grid-template-areas: "nav survival"; } }
+    header > div #logo-container {
+      grid-area: survival;
+      padding: 20px;
+      text-align: right; }
+      header > div #logo-container a:hover,
+      header > div #logo-container a:active {
+        color: #fff; }
+    header > div #burger-container {
+      align-items: center;
+      grid-area: burger;
+      display: flex;
+      padding: 10px; }
+      @media (min-width: 992px) {
+        header > div #burger-container {
+          display: none !important; } }
+      header > div #burger-container i {
+        cursor: pointer;
+        font-size: 1.875rem; }
+    header > div #nav-container {
+      color: #00487C;
+      grid-area: nav;
+      padding: 10px;
+      display: none; }
+      @media (min-width: 992px) {
+        header > div #nav-container {
+          display: block !important; } }
 /* =============
     Footer
 ============= */
@@ -572,7 +614,7 @@ footer {
   color: #000; }
   @media (min-width: 768px) {
     #section_2 {
-      grid-template-columns: auto 70px auto; } }
+      grid-template-columns: auto 500px auto; } }
   @media (min-width: 1200px) {
     #section_2 {
       grid-template-columns: auto 650px auto; } }
